@@ -1,0 +1,41 @@
+<article id="event-{it getString 'id'}" class="column is-one-third-desktop is-half-tablet">
+  <div class="box">
+    <header class="block">
+      <h2 class="subtitle">{it getString 'title'}</h2>
+      <figure class="image is-3by2">
+        <img src="{it getString 'poster'}" alt="The event poster"/>
+      </figure>
+    </header>
+    <section class="block">
+      <div class="content">
+        <p>{it getString 'description'}</p>
+      </div>
+      <div class="level is-mobile">
+        <div class="level-left">
+          <span class="level-item">Date:</span>
+        </div>
+        <div class="level-right">
+          <time class="level-item" datetime="{it getOffsetDateTime 'date'}">
+            <strong>{it getOffsetDateTime 'date' format 'MMM d yyyy - E HH:mm'}</strong>
+          </time>
+        </div>
+      </div>
+      <div class="level is-mobile">
+        <div class="level-left">
+          <span class="level-item">Available tickets:</span>
+        </div>
+        <div class="level-right">
+          <span class="level-item"><strong>{it getInt 'availableTickets'}</strong></span>
+        </div>
+      </div>
+      <div class="block">
+        {#if it.getInt('availableTickets') > 0}
+        <button data-event="{it getString 'id'}" class="button is-primary is-focused is-fullwidth js-book-button ">Book
+        </button>
+        {#else}
+        <button class="button is-danger is-outlined is-fullwidth is-static">Sold out</button>
+        {/if}
+      </div>
+    </section>
+  </div>
+</article>

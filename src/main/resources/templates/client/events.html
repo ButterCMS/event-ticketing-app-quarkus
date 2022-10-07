@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  {#event_css _isolated/}
+  {#event_script _isolated/}
+  <title>Upcoming events</title>
+</head>
+<body class="px-6 py-3 has-text-centered">
+<h1 class="title">Upcoming events</h1>
+<main class="columns is-centered is-vcentered is-multiline">
+  {#for event in events}
+  {#event_html event _isolated/}
+  {#else}
+  <article class="column">
+    Whoops, we don’t have any upcoming events yet! ☹️
+  </article>
+  {/for}
+</main>
+</body>
+</html>
