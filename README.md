@@ -5,6 +5,8 @@ Building an Event Ticketing App with Quarkus &amp; ButterCMS
 This is a demo project that integrates [ButterCMS](https://buttercms.com) with [Quarkus](https://quarkus.io).
 It mimics a ticketing platform on which clients can book tickets for events added by editor through Butter.
 
+The building process is documented in the [related blog post](https://buttercms.com/blog/quarkus-tutorial-event-app/).
+
 # Architecture
 
 The system is organised around Butter and the service that allows clients to book tickets:
